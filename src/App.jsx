@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import react from 'react'
-import GlobalStyle from './styles/global'
-import RoutesApp from './routes'
-
-function App() {
-
-  return (
-    <>
-      <RoutesApp />
-      <GlobalStyle />
-    </>
-  );
-};
-
-export default App;
-=======
 import  { useEffect, useState} from "react";
 import Login from "./components/Login";
 import Logout from "./components/Logout";
@@ -102,4 +85,3 @@ function App() {
 
 export default App;
 
->>>>>>> b95a66e (commit inicial)

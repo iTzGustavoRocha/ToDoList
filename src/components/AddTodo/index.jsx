@@ -1,6 +1,8 @@
 import react from "react"
 import { db } from "../../firebaseConfig"
 import { collection, addDoc } from "firebase/firestore"
+import * as C from "./styles"
+
 
 export function AddTodo() {
     const [title, setTitle] = react.useState("");
@@ -17,19 +19,20 @@ export function AddTodo() {
     };
     return (
         <form onSubmit={handleSubmit}>
-            <div>
-                <input
+            <C.Container>
+                <C.Input
                     type="text"
                     placeholder="Enter todo..."
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                 />
-            </div>
-            <div>
-                <button>
-                    Add
-                </button>
-            </div>
+                <div>
+                    <C.Button>
+                        Add
+                    </C.Button>
+                </div>
+            </C.Container>
+            
         </form>
     )
 }

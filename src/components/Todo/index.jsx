@@ -1,4 +1,5 @@
 import { useState } from "react";
+import * as C from "./styles"
 
 export default function Todo({
     todo,
@@ -18,24 +19,24 @@ export default function Todo({
     };
 
     return(
-        <div>
-            <input 
+        <C.Container>
+            <C.Input 
                 type="text" 
                 value={todo.title === "" ? newTitle : todo.title}
                 onChange={handleChange}
             />
             <div>
-                <button
+                <C.Button
                     onClick={() => toggleComplete(todo)}
                 >
                     feito
-                </button>
-                <button
+                </C.Button>
+                <C.ButtonX
                     onClick={() => handleDelete(todo.id)}
                 >
                     X
-                </button>
+                </C.ButtonX>
             </div>
-        </div>
+        </C.Container>
     )
 }
